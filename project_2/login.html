@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB - Login</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1><a href="/">영화포털</a></h1>
+    <ol>
+    {{ menu }}
+    </ol>
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <p><input type="text" name="id" placeholder="ID"></p>
+        <p><input type="password" name="pw" placeholder="Password"></p>
+        <button type="submit">로그인</button>
+    </form>
+    {{ message }}
+</body>
+</html>

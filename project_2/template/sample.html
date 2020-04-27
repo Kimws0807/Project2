@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> 영화예매 </title>
+    <meta charset = "utf-8">
+    <link type="text/css" rel="stylesheet" href="/static/style.css">
+</head>
+    <body>
+<form action="/main" method="post" enctype="multipart/form-data">
+<table width="1000px" cellpadding="0" cellspacing="0" border="2" align="center">
+<tr>
+    <td width = "300px" colspan= 2 align=CENTER><h2>영화</h2></td>
+    <td width = "300px" colspan= 2 align=CENTER><h2>연극</h2></td>
+</tr>
+{% for s in dm_sum %}
+    <tr> 
+        <td id = "name"><h3><p>{{ s.영화제목 }}</p></h3>
+            예매율 : {{ s.영화예매율 }}<br>
+            <a href="/ticket?name=0{{ s.영화제목 }}">예매</a>
+        </td>
+        <td id = "image"><img src='{{ s.영화이미지}}' width = "150" height = "200"></td>
+        <td id = "name"><h3><p>{{ s.연극제목 }}</p></h3>
+            판매율 : {{ s.연극예매율 }}<br>
+            <a href="/ticket?name=1{{ s.연극제목 }}">예매</a>
+        </td>
+        <td id = "image"><img src='{{ s.연극이미지}}' width = "150" height = "200"></td>
+    </tr>
+{% endfor %}
+    </table>
+</form>
+  </body>
+</html>
+    

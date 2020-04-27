@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB - 회원가입</title>
+    <meta charset = "utf-8">
+</head>
+    <body>
+        <h1><a href="/create">회원가입</a></h1>
+        <ol>
+        {{ menu }}
+        </ol>
+        <form action="/create" method="post">
+            <p><input type="text" name="id" placeholder="ID"></p>
+            <p><input type="text" name="name" placeholder="이름"></p>
+            <p><input type="text" name="mail" placeholder="전자우편"></p>
+            <p><input type="text" name="pw" placeholder="Password"></p>
+            <button type="submit">등록</button>
+        </form>
+        {{ message }}
+    </body>
+</html>
